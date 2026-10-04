@@ -1,13 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Tubepilot Ai - Privacy Policy</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — TubePilot AI</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Privacy Policy for Tubepilot Ai</h1>
-    <p><strong>1. Data Collection & Usage:</strong> Tubepilot Ai accesses YouTube account information using Google OAuth 2.0 to provide channel management features directly within our desktop application.</p>
-    <p><strong>2. Data Storage & Security:</strong> All access tokens and channel data are processed and stored locally on your desktop machine. We do not store, transfer, or sell your personal YouTube data to any external servers or third parties.</p>
-    <p><strong>3. Google API Services Compliance:</strong> Tubepilot Ai's use and transfer to any other app of information received from Google APIs will adhere to the Google API Services User Data Policy, including the Limited Use requirements.</p>
-    <p><strong>4. User Control & Data Deletion:</strong> Users can revoke Tubepilot Ai's access to their YouTube data at any time via Google Security Settings (https://myaccount.google.com/permissions).</p>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">TubePilot AI</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="mailto:mohsinabbaskhan1248@gmail.com">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="legal-page">
+    <div class="container narrow">
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: October 4, 2026 · TubePilot AI v1.1.2</p>
+
+      <p>
+        TubePilot AI ("TubePilot", "we", "our") is a Windows desktop application developed by
+        <strong>Mohsin Abbas</strong>. This policy explains how the app handles information when you
+        use it to manage your YouTube channels.
+      </p>
+
+      <h2>Overview</h2>
+      <p>
+        TubePilot AI runs locally on your Windows computer. The app connects to your YouTube account
+        through Google OAuth 2.0 and the official YouTube Data API v3. You choose which Google /
+        YouTube account to connect and what content to upload.
+      </p>
+
+      <h2>Information stored on your device</h2>
+      <ul>
+        <li>Google OAuth tokens (access and refresh tokens) for connected YouTube accounts</li>
+        <li>Channel settings, folder paths, upload queue, and upload history</li>
+        <li>Activity logs (uploads, scheduling, authentication events, errors)</li>
+        <li>Optional OpenAI API key if you choose to enable AI metadata features</li>
+        <li>Cached competitor and trend data from public YouTube search results</li>
+      </ul>
+      <p>
+        This data is stored in your Windows user profile (Electron application data folder) unless
+        you delete it or uninstall the application.
+      </p>
+
+      <h2>Information sent to third parties</h2>
+      <ul>
+        <li>
+          <strong>Google / YouTube (required):</strong> When you click Connect YouTube, you sign in
+          with Google OAuth. TubePilot uses the YouTube Data API to read channel statistics,
+          upload videos you authorize, and manage metadata. This is governed by the
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>
+          and <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a>.
+        </li>
+        <li>
+          <strong>OpenAI (optional):</strong> If you provide an OpenAI API key in Settings, video
+          filenames and metadata context may be sent to OpenAI to generate titles, descriptions,
+          and tags. Governed by the
+          <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI Privacy Policy</a>.
+        </li>
+        <li>
+          <strong>Developer servers:</strong> TubePilot AI v1.1.2 does not require sending your
+          personal YouTube data to Mohsin Abbas or TubePilot-operated servers for core features.
+          Optional support reporting may include issue descriptions you submit voluntarily.
+        </li>
+      </ul>
+
+      <h2>Video files</h2>
+      <p>
+        Video files remain on your computer in your chosen channel folders until you upload them.
+        Uploads go directly to YouTube through Google's official API. We do not host your video files
+        on external servers as part of normal app operation.
+      </p>
+
+      <h2>AI-generated content</h2>
+      <p>
+        TubePilot uses generative AI for titles, descriptions, insights, and video diagnosis.
+        You can report inappropriate AI output using the in-app Report an Issue feature.
+      </p>
+
+      <h2>Children's privacy</h2>
+      <p>
+        TubePilot AI is not directed at children under 13. We do not knowingly collect personal
+        information from children.
+      </p>
+
+      <h2>Data retention and deletion</h2>
+      <p>
+        You may disconnect YouTube accounts in Settings, clear the upload queue, or uninstall
+        TubePilot AI at any time. Uninstalling may leave residual data in your AppData folder until
+        you delete it manually. You can revoke TubePilot's access at
+        <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google Account permissions</a>.
+      </p>
+
+      <h2>Changes to this policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. The "Last updated" date at the top
+        indicates the current version. Continued use of the app after changes constitutes acceptance
+        of the updated policy.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Privacy questions and support:<br>
+        <strong><a href="mailto:mohsinabbaskhan1248@gmail.com">mohsinabbaskhan1248@gmail.com</a></strong>
+      </p>
+      <p>
+        Developer: Mohsin Abbas<br>
+        Website: <a href="https://tubepilotai.app">https://tubepilotai.app</a><br>
+        Microsoft Store:
+        <a href="https://apps.microsoft.com/detail/9MZR3WZD5DH2" target="_blank" rel="noopener">TubePilot AI</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 Mohsin Abbas · TubePilot AI</p>
+      <p><a href="index.html">Home</a> · <a href="terms.html">Terms</a></p>
+    </div>
+  </footer>
 </body>
 </html>
