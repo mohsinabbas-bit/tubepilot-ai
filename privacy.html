@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - TubePilot AI</title>
+  <meta name="description" content="Privacy Policy for TubePilot AI including Google user data, YouTube API Services, data use, and data protection.">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="app-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style id="site-inline">
+:root {
+  --bg: #07070c;
+  --bg-2: #0e0e16;
+  --card: #14141f;
+  --border: rgba(255, 255, 255, 0.09);
+  --text: #f3f4f8;
+  --muted: #9ca3af;
+  --accent: #6366f1;
+  --accent-2: #a855f7;
+  --glow: rgba(99, 102, 241, 0.35);
+  --radius: 16px;
+  --radius-lg: 22px;
+  --header-h: 72px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 12px); }
+body {
+  font-family: Inter, "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: #a5b4fc; text-decoration: none; pointer-events: auto; cursor: pointer; }
+a:hover { color: #c4b5fd; }
+.site-header, .site-nav, .site-footer, main { position: relative; z-index: 1; }
+a.email-cta, a.store-cta, .btn { pointer-events: auto; cursor: pointer; }
+
+.container { width: min(1180px, calc(100% - 32px)); margin-inline: auto; }
+
+.site-header {
+  position: fixed; inset: 0 0 auto; z-index: 200; height: var(--header-h);
+  transition: height 0.25s, background 0.25s, backdrop-filter 0.25s, border-color 0.25s;
+  border-bottom: 1px solid transparent;
+}
+.site-header.is-scrolled {
+  height: 60px;
+  background: rgba(7, 7, 12, 0.92);
+  backdrop-filter: blur(14px);
+  border-color: var(--border);
+}
+.header-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+}
+
+.brand {
+  display: flex; align-items: center; gap: 10px; color: var(--text);
+  font-weight: 800; font-size: 1rem; flex-shrink: 0;
+}
+.brand img { width: 40px; height: 40px; border-radius: 11px; box-shadow: 0 8px 24px var(--glow); }
+
+.site-nav {
+  display: flex; align-items: center; gap: 18px; flex-wrap: nowrap; min-width: 0;
+}
+.site-nav a:not(.btn) { color: var(--muted); font-size: 0.88rem; font-weight: 500; white-space: nowrap; }
+.site-nav a:not(.btn):hover { color: var(--text); }
+.nav-cta { flex-shrink: 0; white-space: nowrap; }
+
+.menu-btn {
+  display: none; border: 1px solid var(--border); background: var(--card);
+  color: var(--text); border-radius: 10px; padding: 8px 12px; cursor: pointer; flex-shrink: 0;
+}
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 14px 22px; border-radius: 12px; font-weight: 700; font-size: 0.94rem;
+  border: 1px solid transparent; transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; box-shadow: 0 12px 32px var(--glow); }
+.btn-primary:hover { color: #fff; }
+.btn-ghost { background: rgba(255,255,255,0.04); border-color: var(--border); color: var(--text); }
+.btn-ghost:hover { background: rgba(255,255,255,0.07); color: var(--text); }
+.btn-sm { padding: 10px 14px; font-size: 0.82rem; }
+
+main { padding-top: var(--header-h); }
+.section { padding: 72px 0; }
+.section-muted { background: var(--bg-2); border-block: 1px solid var(--border); }
+.section-head { text-align: center; max-width: 740px; margin: 0 auto 40px; }
+.section-head h2 { font-size: clamp(1.75rem, 3vw, 2.35rem); letter-spacing: -0.02em; margin-bottom: 12px; }
+.section-head p { color: var(--muted); font-size: 1.02rem; }
+
+.pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.pill {
+  padding: 6px 12px; border-radius: 999px; font-size: 0.76rem; font-weight: 600;
+  background: rgba(99,102,241,0.12); border: 1px solid rgba(129,140,248,0.28); color: #c4b5fd;
+}
+
+.hero { padding: 56px 0 72px; position: relative; overflow-x: clip; overflow-y: visible; }
+.hero::before {
+  content: ""; position: absolute; inset: -30% -20% auto; height: 80%;
+  background: radial-gradient(ellipse at 25% 15%, rgba(99,102,241,0.22), transparent 55%),
+              radial-gradient(ellipse at 85% 20%, rgba(168,85,247,0.16), transparent 50%);
+  pointer-events: none;
+}
+.hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  column-gap: 72px;
+  row-gap: 32px;
+  align-items: center;
+}
+.hero-copy { min-width: 0; padding-right: 16px; }
+.hero-visual-wrap { isolation: isolate; overflow: hidden; }
+.hero-reviews {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+.hero-reviews-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+.review-grid-hero { margin-top: 0; }
+.hero h1 { font-size: clamp(2rem, 4vw, 3.1rem); line-height: 1.08; letter-spacing: -0.03em; font-weight: 800; margin-bottom: 16px; }
+.hero p.lead { color: var(--muted); font-size: 1.08rem; max-width: 36rem; margin-bottom: 22px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; }
+.trust-line { display: flex; flex-wrap: wrap; gap: 10px 20px; font-size: 0.84rem; color: var(--muted); line-height: 1.5; }
+.trust-line span { display: inline-flex; align-items: center; }
+.trust-line span + span::before { content: "|"; margin-right: 20px; color: rgba(255,255,255,0.2); }
+
+.window {
+  border-radius: var(--radius-lg); border: 1px solid var(--border);
+  background: linear-gradient(160deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  box-shadow: 0 28px 80px rgba(0,0,0,0.5); padding: 10px;
+  min-width: 0;
+}
+.window-bar { display: flex; gap: 6px; padding: 6px 8px 10px; }
+.window-bar span { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.15); }
+.window-bar span:nth-child(1) { background: #ef4444; }
+.window-bar span:nth-child(2) { background: #f59e0b; }
+.window-bar span:nth-child(3) { background: #22c55e; }
+.window img {
+  border-radius: 12px; border: 1px solid var(--border); width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top center;
+  background: var(--card);
+}
+
+.hero-shot, .showcase-shot { max-width: 100%; }
+
+.feature-chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 28px;
+  max-width: 900px;
+  padding: 0;
+}
+.feature-chips li {
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+.showcase-shot { max-width: 920px; margin: 0 auto; }
+
+.benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.benefit {
+  padding: 24px; border-radius: var(--radius-lg); background: var(--card); border: 1px solid var(--border);
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+.benefit:hover { transform: translateY(-3px); border-color: rgba(99,102,241,0.35); box-shadow: 0 16px 40px rgba(0,0,0,0.35); }
+.benefit .tag { font-size: 0.72rem; letter-spacing: 0.08em; font-weight: 800; color: #a5b4fc; margin-bottom: 10px; }
+.benefit h3 { font-size: 1.05rem; margin-bottom: 8px; }
+.benefit p { color: var(--muted); font-size: 0.94rem; }
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: center;
+  margin-bottom: 56px;
+}
+.split:last-of-type { margin-bottom: 0; }
+.split.reverse .copy { order: 2; }
+.split.reverse .visual { order: 1; }
+.split .copy { min-width: 0; }
+.split .visual { min-width: 0; }
+.split h3 { font-size: 1.65rem; letter-spacing: -0.02em; margin-bottom: 12px; }
+.split p { color: var(--muted); }
+
+.audience { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.aud-card { padding: 28px; border-radius: var(--radius-lg); background: var(--card); border: 1px solid var(--border); }
+.aud-card h3 { margin-bottom: 10px; font-size: 1.15rem; }
+.aud-card p { color: var(--muted); }
+
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.gallery figure {
+  border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border);
+  background: var(--card); display: flex; flex-direction: column;
+}
+.gallery-img {
+  aspect-ratio: 16 / 10;
+  background: var(--bg-2);
+  overflow: hidden;
+}
+.gallery-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+.gallery figcaption {
+  padding: 12px 14px; font-size: 0.82rem; color: var(--muted); font-weight: 600;
+  border-top: 1px solid var(--border);
+}
+
+.trust-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.trust-card { padding: 22px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--border); }
+.trust-card h4 { margin-bottom: 8px; }
+.trust-card p { color: var(--muted); font-size: 0.92rem; }
+
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.step { padding: 22px; border-radius: var(--radius-lg); background: var(--card); border: 1px solid var(--border); }
+.step .n { font-size: 1.4rem; font-weight: 800; color: #818cf8; margin-bottom: 8px; }
+.step h4 { margin-bottom: 8px; font-size: 0.98rem; }
+.step p { color: var(--muted); font-size: 0.9rem; }
+
+.faq { max-width: 780px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-q {
+  width: 100%; text-align: left; background: none; border: none; color: var(--text);
+  padding: 18px 0; font-size: 1rem; font-weight: 600; cursor: pointer;
+  display: flex; justify-content: space-between; gap: 12px;
+}
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; color: var(--muted); font-size: 0.94rem; }
+.faq-item.open .faq-a { max-height: 280px; padding-bottom: 16px; }
+
+.cta-band {
+  text-align: center; padding: 80px 0; position: relative; overflow: hidden;
+  background: radial-gradient(ellipse at center, rgba(99,102,241,0.14), transparent 65%);
+}
+.cta-band h2 { font-size: clamp(1.85rem, 4vw, 2.6rem); letter-spacing: -0.02em; margin-bottom: 14px; }
+.cta-band p { color: var(--muted); max-width: 680px; margin: 0 auto 28px; font-size: 1.05rem; line-height: 1.6; }
+.cta-band .btn { margin-bottom: 4px; }
+.cta-trust { justify-content: center; margin-top: 20px; }
+
+.site-footer { border-top: 1px solid var(--border); background: var(--bg-2); padding: 48px 0 24px; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 28px; margin-bottom: 28px; }
+.footer-grid h4 { font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 12px; }
+.footer-grid a, .footer-blurb { display: block; color: var(--muted); font-size: 0.92rem; margin-bottom: 8px; max-width: 280px; }
+.footer-bottom { border-top: 1px solid var(--border); padding-top: 18px; color: #6b7280; font-size: 0.85rem; }
+
+.reveal { opacity: 1; transform: none; transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.reveal-animate { opacity: 0; transform: translateY(16px); }
+.reveal.reveal-animate.show { opacity: 1; transform: none; }
+#reviews, #reviews .review-card, .hero-reviews, .hero-reviews .review-card { opacity: 1 !important; transform: none !important; }
+
+.legal { padding: 48px 0 80px; }
+.legal h1 { font-size: 2rem; margin-bottom: 8px; }
+.legal .meta { color: var(--muted); margin-bottom: 28px; }
+.legal h2 { margin: 28px 0 10px; font-size: 1.2rem; }
+.legal p, .legal li { color: #d1d5db; margin-bottom: 10px; }
+.legal ul { margin-left: 1.2rem; }
+.narrow { max-width: 780px; }
+
+.cta-row { text-align: center; margin-top: 28px; }
+
+@media (max-width: 1024px) {
+  .hero-grid { column-gap: 32px; grid-template-columns: 1fr; }
+  .hero-copy { padding-right: 0; }
+  .review-grid-hero { grid-template-columns: repeat(2, 1fr); }
+  .site-nav a:not(.btn) { display: none; }
+  .site-nav.open a:not(.btn) { display: block; }
+  .hero-grid, .split, .benefits, .audience, .gallery, .trust-grid, .steps, .footer-grid { grid-template-columns: 1fr; }
+  .split.reverse .copy, .split.reverse .visual { order: unset; }
+  .menu-btn { display: inline-flex; }
+  .site-nav {
+    position: fixed; top: 60px; left: 16px; right: 16px; flex-direction: column; align-items: stretch;
+    background: rgba(14,14,22,0.98); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 8px; display: none; gap: 0;
+  }
+  .site-nav.open { display: flex; }
+  .site-nav a { padding: 12px 14px; }
+  .site-nav .nav-cta { margin: 8px; }
+}
+
+@media (max-width: 640px) {
+  .section { padding: 56px 0; }
+  .brand span { font-size: 0.92rem; }
+  .btn-sm { padding: 9px 12px; font-size: 0.78rem; }
+}
+
+/* Hero visual + floating benefit cards (not customer testimonials) */
+.hero-visual-wrap { position: relative; min-width: 0; }
+.float-cards {
+  position: absolute;
+  inset: -8% -6% -8% -6%;
+  pointer-events: none;
+  z-index: 2;
+}
+.float-card {
+  position: absolute;
+  max-width: 220px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(20, 20, 31, 0.92);
+  border: 1px solid rgba(129, 140, 248, 0.22);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.45);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--text);
+  backdrop-filter: blur(10px);
+  animation: floatY 7s ease-in-out infinite;
+}
+.float-card .float-label {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #a5b4fc;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.float-card-a { top: 6%; left: -4%; animation-delay: 0s; }
+.float-card-b { top: 38%; right: -6%; animation-delay: 1.2s; }
+.float-card-c { bottom: 14%; left: 0; animation-delay: 2.4s; }
+.float-card-d { bottom: 8%; right: 4%; animation-delay: 0.6s; }
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.feature-card {
+  padding: 22px;
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  border: 1px solid var(--border);
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+.feature-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(99, 102, 241, 0.35);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.32);
+}
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  display: grid;
+  place-items: center;
+  background: rgba(99, 102, 241, 0.14);
+  border: 1px solid rgba(129, 140, 248, 0.25);
+  color: #c4b5fd;
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.feature-card h3 { font-size: 0.98rem; margin-bottom: 8px; }
+.feature-card p { color: var(--muted); font-size: 0.88rem; }
+
+.why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.why-card {
+  padding: 26px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(145deg, rgba(99, 102, 241, 0.08), rgba(20, 20, 31, 0.9));
+  border: 1px solid var(--border);
+}
+.why-card h3 { font-size: 1.12rem; margin-bottom: 10px; }
+.why-card p { color: var(--muted); font-size: 0.94rem; }
+
+.offer-panel {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 32px;
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+.offer-panel h2 { margin-bottom: 14px; }
+.offer-panel p { margin-bottom: 18px; line-height: 1.6; }
+.offer-panel .btn { margin-top: 4px; }
+.offer-panel p.note { color: var(--muted); font-size: 0.92rem; margin-top: 18px; }
+
+.support-block {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+.support-block .btn { margin-top: 8px; margin-bottom: 12px; }
+.support-block a.email-link {
+  display: inline-flex;
+  margin-top: 4px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #c4b5fd;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(129, 140, 248, 0.35);
+  background: rgba(99, 102, 241, 0.1);
+}
+.support-block a.email-link:hover { color: #fff; background: rgba(99, 102, 241, 0.2); }
+.support-block a.email-link:focus-visible {
+  outline: 2px solid #818cf8;
+  outline-offset: 3px;
+}
+
+.steps-three { grid-template-columns: repeat(3, 1fr); }
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid #818cf8;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .float-card, .reveal { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+
+@media (max-width: 1024px) {
+  .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: 1fr; }
+  .steps-three { grid-template-columns: 1fr; }
+  .float-cards {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 16px;
+    pointer-events: auto;
+  }
+  .float-card {
+    position: static;
+    max-width: none;
+    animation: none;
+  }
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 8px;
+}
+.review-grid-hero {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+.review-card {
+  padding: 22px 20px;
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+  animation: floatY 8s ease-in-out infinite;
+}
+.review-card:nth-child(2) { animation-delay: 1s; }
+.review-card:nth-child(3) { animation-delay: 2s; }
+.review-card:nth-child(4) { animation-delay: 0.5s; }
+.review-card:nth-child(5) { animation-delay: 1.5s; }
+.review-card:nth-child(6) { animation-delay: 2.5s; }
+.review-text { font-size: 0.94rem; line-height: 1.55; color: var(--text); margin-bottom: 14px; }
+.review-author { font-size: 0.82rem; font-weight: 600; color: #a5b4fc; margin: 0; }
+.section-note { text-align: center; color: var(--muted); font-size: 0.9rem; margin: -24px auto 28px; max-width: 520px; }
+
+@media (max-width: 640px) {
+  .feature-grid { grid-template-columns: 1fr; }
+  .float-cards { grid-template-columns: 1fr; }
+  .review-grid { grid-template-columns: 1fr; }
+  .review-card { animation: none; }
+}
+
+@media (max-width: 1200px) {
+  .review-grid-hero { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 1024px) {
+  .review-grid { grid-template-columns: repeat(2, 1fr); }
+  .review-grid-hero { grid-template-columns: repeat(2, 1fr); }
+}
+
+</style>
+</head>
+<body>
+  <header class="site-header is-scrolled">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="app-icon.png" width="40" height="40" alt="TubePilot AI logo"> <span>TubePilot AI</span></a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">Menu</button>
+      <nav class="site-nav" id="primary-nav" aria-label="Primary">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#how-it-works">How It Works</a>
+        <a href="index.html#why">Why TubePilot AI</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="mailto:Team@tubepilotai.app?subject=TubePilot%20AI%20Support">Support</a>
+        <a class="btn btn-primary btn-sm nav-cta store-cta" href="https://apps.microsoft.com/detail/9MZR3WZD5DH2?hl=en-us&amp;gl=US&amp;ocid=pdpshare" target="_blank" rel="noopener noreferrer">Download for Windows</a>
+      </nav>
+    </div>
+  </header>
+  <main class="legal">
+    <div class="container narrow">
+      <h1>Privacy Policy for TubePilot AI</h1>
+      <p class="meta">Last Updated: October 12, 2026</p>
+      <p>
+        TubePilot AI (&quot;TubePilot AI,&quot; &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates the TubePilot AI desktop application for Windows
+        and the website at <a href="https://tubepilotai.app">https://tubepilotai.app</a> (together, the &quot;Service&quot;).
+        This Privacy Policy explains how we access, use, store, and protect information, including <strong>Google user data</strong>
+        obtained through Google OAuth and YouTube API Services.
+      </p>
+      <p>
+        By using the Service, you agree to this Privacy Policy. If you do not agree, do not use the Service.
+      </p>
+
+      <h2>1. Application Overview</h2>
+      <p>
+        TubePilot AI is a local Windows application that helps YouTube creators and agencies connect authorized YouTube channels,
+        manage upload queues, schedule publishing, generate metadata assistance, and view channel performance inside the app.
+        The app communicates with Google only when you choose to sign in with Google and use YouTube-related features.
+      </p>
+
+      <h2>2. Google OAuth Scopes We Request</h2>
+      <p>
+        When you connect a Google or YouTube account, the OAuth consent screen lists the permissions (scopes) required for app features.
+        TubePilot AI may request the following scopes:
+      </p>
+      <ul>
+        <li><strong>openid, email, profile</strong> - Identify your Google account during sign-in and associate the correct YouTube channels with your session in the app.</li>
+        <li><strong>https://www.googleapis.com/auth/youtube.readonly</strong> - Read channel and video information (for example titles, descriptions, tags, statistics, and channel metadata) to display dashboards, analytics, research, and insights inside the app.</li>
+        <li><strong>https://www.googleapis.com/auth/youtube.upload</strong> - Upload video files and manage uploads that you initiate in the app (for example queued or scheduled uploads to your channel).</li>
+        <li><strong>https://www.googleapis.com/auth/youtube.force-ssl</strong> - Update video metadata and manage YouTube content that you edit through the app (for example changing title, description, or tags on videos you manage).</li>
+        <li><strong>https://www.googleapis.com/auth/youtube</strong> - Manage your YouTube account features that require broader channel and video management permissions when you use upload, scheduling, metadata edit, and related in-app workflows.</li>
+      </ul>
+      <p>
+        We request only scopes needed for features you use. You can revoke access at any time in your
+        <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google Account permissions</a>.
+      </p>
+
+      <h2>3. Google User Data We Access</h2>
+      <p>
+        Through Google OAuth and YouTube Data API Services, the application may access the following categories of
+        <strong>Google user data</strong> (depending on which features you use):
+      </p>
+      <ul>
+        <li><strong>Google account identifiers:</strong> Basic profile information from your Google account (such as account email and profile identifiers) used to link your sign-in to connected channels.</li>
+        <li><strong>YouTube channel information:</strong> Channel IDs, channel titles, thumbnails, branding, subscriber counts, view counts, and other channel metadata for channels you authorize.</li>
+        <li><strong>Video metadata and listings:</strong> Video IDs, titles, descriptions, tags, categories, privacy or publish status, upload timestamps, and thumbnails for videos on channels you manage or analyze through in-app tools.</li>
+        <li><strong>Video performance and analytics data:</strong> Statistics such as views, likes, comments counts, and related metrics displayed in dashboards, analytics, channel research, and insights features.</li>
+        <li><strong>Upload and content-management data:</strong> Video files and metadata that you select in the app for upload, scheduling, review, or metadata updates to YouTube.</li>
+        <li><strong>OAuth tokens:</strong> Access and refresh tokens issued by Google so the app can call YouTube API Services on your behalf until you sign out or revoke access.</li>
+      </ul>
+      <p>
+        We do <strong>not</strong> request access to unrelated Google products (such as Gmail, Google Drive, Google Photos, or Google Calendar) for core YouTube management features.
+      </p>
+
+      <h2>4. How We Use Google User Data</h2>
+      <p>
+        We use Google user data <strong>only</strong> to provide and operate the Service features you request. Specific uses include:
+      </p>
+      <ul>
+        <li><strong>Authentication and channel connection:</strong> Sign you in with Google OAuth and connect YouTube channels you select.</li>
+        <li><strong>Dashboard and channel management:</strong> Display connected channels, queue status, health indicators, and summary metrics.</li>
+        <li><strong>Uploads and scheduling:</strong> Upload videos and apply publish settings you configure (including review or automatic workflows you enable).</li>
+        <li><strong>Metadata editing:</strong> Read and update titles, descriptions, tags, and related video fields when you edit or publish content in the app.</li>
+        <li><strong>Analytics and research:</strong> Show performance metrics, comparisons, and insights derived from YouTube API data to help you understand channel activity.</li>
+        <li><strong>Quota and reliability:</strong> Monitor API usage limits to pause or protect operations when daily API quota is low (as configured in Settings).</li>
+        <li><strong>Support and troubleshooting:</strong> Diagnose errors you report (for example upload failures or authentication issues) using information you provide and local app logs.</li>
+      </ul>
+      <p><strong>Limited use commitment (Google API Services User Data Policy):</strong></p>
+      <ul>
+        <li>We do <strong>not</strong> use Google user data for serving advertisements.</li>
+        <li>We do <strong>not</strong> sell, rent, or trade Google user data.</li>
+        <li>We do <strong>not</strong> use Google user data for purposes unrelated to providing or improving user-facing YouTube management features in TubePilot AI.</li>
+        <li>We do <strong>not</strong> transfer Google user data to third parties except as needed to operate the Service (see Section 6), comply with law, or with your direction (for example uploading content to YouTube at your request).</li>
+      </ul>
+
+      <h2>5. Optional Third-Party AI Features (User-Controlled)</h2>
+      <p>
+        If you optionally enter an <strong>OpenAI API key</strong> in Settings, metadata or video-analysis features may send
+        <strong>content you choose to process</strong> (such as video filenames, extracted frames, or text you generate) directly from your device
+        to OpenAI using <strong>your</strong> API key and <strong>your</strong> OpenAI account. That data is not sent to TubePilot AI servers.
+        OpenAI processing is governed by OpenAI&apos;s terms and privacy policy. You can disable these features by removing your API key.
+      </p>
+
+      <h2>6. Data Storage, Retention, and Deletion</h2>
+      <ul>
+        <li><strong>Local-first storage:</strong> OAuth tokens, channel settings, queues, preferences, and most app data are stored on your Windows device in local application storage (not on TubePilot AI-owned cloud servers).</li>
+        <li><strong>No sale of data:</strong> We do not sell Google user data or YouTube API data.</li>
+        <li><strong>Retention:</strong> We retain Google user data locally only as long as needed to provide the Service while your account remains connected and the app is in use, or until you delete local app data or uninstall the application.</li>
+        <li><strong>Deletion and revocation:</strong> You may sign out in the app, delete local channel data, uninstall TubePilot AI, and revoke the app in Google Account permissions. After revocation, the app cannot access your YouTube data unless you connect again.</li>
+        <li><strong>Website:</strong> The marketing website (tubepilotai.app) does not require Google sign-in and does not collect YouTube account data from visitors browsing the site.</li>
+      </ul>
+
+      <h2>7. Data Protection and Security Mechanisms</h2>
+      <p>We protect sensitive data using the following measures:</p>
+      <ul>
+        <li><strong>Encryption in transit:</strong> All communication between TubePilot AI and Google API Services (including YouTube Data API) uses HTTPS/TLS.</li>
+        <li><strong>Local credential storage:</strong> OAuth tokens and app secrets configured on your device are stored locally for app operation and are not published by us to third-party marketing databases.</li>
+        <li><strong>Least-privilege access:</strong> The app requests OAuth scopes tied to YouTube management features and uses API access only for authorized channels you connect.</li>
+        <li><strong>User control:</strong> You choose which channels to connect, which videos to upload, and when to publish or edit metadata.</li>
+        <li><strong>Access revocation:</strong> You can remove app access at any time via <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google Account permissions</a>.</li>
+        <li><strong>Quota protection:</strong> Configurable limits and auto-pause options help reduce accidental excessive API usage.</li>
+        <li><strong>Device security:</strong> You are responsible for securing your Windows user account, disk encryption, and physical access to your computer where local tokens and video files are stored.</li>
+      </ul>
+      <p>
+        No method of transmission or storage is 100% secure. We work to protect information using reasonable technical and organizational measures appropriate to a local desktop application.
+      </p>
+
+      <h2>8. Sharing and Disclosure</h2>
+      <p>We may share information only in these situations:</p>
+      <ul>
+        <li><strong>With Google / YouTube:</strong> When you use the app to upload, update, or manage content on YouTube at your direction.</li>
+        <li><strong>With service providers you configure:</strong> For example OpenAI if you provide an API key for optional AI features.</li>
+        <li><strong>Legal requirements:</strong> If required by law, regulation, legal process, or enforceable governmental request.</li>
+        <li><strong>Safety:</strong> To protect rights, safety, and security of users or the public, where permitted by law.</li>
+      </ul>
+      <p>We do not share Google user data with data brokers or for third-party advertising.</p>
+
+      <h2>9. Children&apos;s Privacy</h2>
+      <p>
+        TubePilot AI is not directed to children under 13 (or the age required in your country). We do not knowingly collect personal information from children.
+        If you believe a child has provided Google account access through the app, contact us and we will assist with disconnection steps.
+      </p>
+
+      <h2>10. International Users</h2>
+      <p>
+        You control where your device and local data reside. Google and YouTube process data according to Google&apos;s policies when you use their services.
+      </p>
+
+      <h2>11. YouTube Terms of Service and Google Policies</h2>
+      <p>
+        TubePilot AI uses YouTube API Services. By using the Service, you agree to be bound by the
+        <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a> and the
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.
+        You can review Google&apos;s security settings and connected apps at
+        <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google Account permissions</a>.
+      </p>
+
+      <h2>12. Changes to This Privacy Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. We will post the updated version at
+        <a href="https://tubepilotai.app/privacy.html">https://tubepilotai.app/privacy.html</a> and update the &quot;Last Updated&quot; date.
+        Continued use of the Service after changes means you accept the updated policy.
+      </p>
+
+      <h2>13. Contact Us</h2>
+      <p>
+        For privacy questions, OAuth verification, or data requests related to TubePilot AI, contact:
+      </p>
+      <p>
+        <strong>Email:</strong> <a class="email-cta" href="mailto:Team@tubepilotai.app?subject=TubePilot%20AI%20Support">Team@tubepilotai.app</a><br>
+        <strong>Website:</strong> <a href="https://tubepilotai.app">https://tubepilotai.app</a><br>
+        <strong>Application:</strong> TubePilot AI (Windows, Microsoft Store)
+      </p>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html"><img src="app-icon.png" width="36" height="36" alt=""> TubePilot AI</a>
+          <p class="footer-blurb">Windows software for organizing YouTube channel workflows.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <a href="index.html#features">Features</a>
+          <a href="index.html#how-it-works">How It Works</a>
+          <a href="index.html#faq">FAQ</a>
+          <a class="store-cta" href="https://apps.microsoft.com/detail/9MZR3WZD5DH2?hl=en-us&amp;gl=US&amp;ocid=pdpshare" target="_blank" rel="noopener noreferrer">Microsoft Store</a>
+        </div>
+        <div>
+          <h4>Legal &amp; support</h4>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a class="email-cta" href="mailto:Team@tubepilotai.app?subject=TubePilot%20AI%20Support">Contact support</a>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 TubePilot AI. All rights reserved.</div>
+    </div>
+  </footer>
+  <script id="site-inline">
+(function () {
+  const header = document.querySelector('.site-header')
+  const menu = document.querySelector('.menu-btn')
+  const nav = document.querySelector('.site-nav')
+
+  if (header) {
+    const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 20)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
+  }
+
+  if (menu && nav) {
+    menu.addEventListener('click', () => {
+      const open = nav.classList.toggle('open')
+      menu.setAttribute('aria-expanded', open ? 'true' : 'false')
+      menu.setAttribute('aria-label', open ? 'Close menu' : 'Open menu')
+    })
+    nav.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', (ev) => {
+        nav.classList.remove('open')
+        menu.setAttribute('aria-expanded', 'false')
+        menu.setAttribute('aria-label', 'Open menu')
+        if (a.getAttribute('href') && a.getAttribute('href').charAt(0) === '#') {
+          const id = a.getAttribute('href').slice(1)
+          const target = document.getElementById(id)
+          if (target) {
+            ev.preventDefault()
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+          }
+        }
+      })
+    })
+  }
+
+  document.querySelectorAll('.faq-item').forEach((item) => {
+    const q = item.querySelector('.faq-q')
+    const a = item.querySelector('.faq-a')
+    if (!q || !a) return
+    q.addEventListener('click', () => {
+      const wasOpen = item.classList.contains('open')
+      document.querySelectorAll('.faq-item').forEach((i) => {
+        i.classList.remove('open')
+        const btn = i.querySelector('.faq-q')
+        if (btn) btn.setAttribute('aria-expanded', 'false')
+      })
+      if (!wasOpen) {
+        item.classList.add('open')
+        q.setAttribute('aria-expanded', 'true')
+      }
+    })
+  })
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  const els = document.querySelectorAll('.reveal')
+  els.forEach((el) => {
+    if (el.closest('#reviews') || el.id === 'reviews') return
+    el.classList.add('reveal-animate')
+  })
+  if (!reducedMotion && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('show')
+            io.unobserve(e.target)
+          }
+        })
+      },
+      { threshold: 0.08 }
+    )
+    els.forEach((el) => {
+      if (el.classList.contains('reveal-animate')) io.observe(el)
+    })
+    window.setTimeout(() => {
+      els.forEach((el) => el.classList.add('show'))
+    }, 1200)
+  } else {
+    els.forEach((el) => el.classList.add('show'))
+  }
+
+  document.querySelectorAll('.store-cta').forEach((el) => {
+    el.addEventListener('click', () => {
+      window.dispatchEvent(new CustomEvent('tubepilot:store-click', { detail: { href: el.href } }))
+    })
+  })
+  document.querySelectorAll('.email-cta').forEach((el) => {
+    el.addEventListener('click', () => {
+      window.dispatchEvent(new CustomEvent('tubepilot:email-click', { detail: { href: el.href } }))
+    })
+  })
+})()
+
+</script>
+</body>
+</html>
