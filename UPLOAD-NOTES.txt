@@ -1,0 +1,6 @@
+﻿REUPLOAD — visual fix
+1. Keep CNAME on GitHub (do not delete).
+2. Replace at least: index.html + site.css (+ all other files in this folder).
+3. Theme now matches the app: dark charcoal + indigo/purple buttons (no green).
+4. Dashboard screenshot sits BELOW the hero text in a clear frame — not behind writing.
+5. Floating reviews (right to left) kept.
